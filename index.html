@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English FundaVida</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app">
     <header class="topbar">
       <div class="brand">
-   <img src="/logo.jpg" alt="Logo de Fundavida" class="brand-logo">
-  <div>
-    <h1>English FundaVida</h1>
-    <p>¡Aprende inglés jugando!</p>
-  </div>
-</div>
+        <img src="logo.jpg" alt="Logo de FundaVida" class="brand-logo">
+        <div>
+          <h1>English FundaVida</h1>
+          <p>¡Aprende inglés jugando!</p>
+        </div>
+      </div>
     </header>
 
     <section id="start-screen" class="panel start-screen">
@@ -24,7 +24,7 @@
       <h2>¿Listo para tu misión?</h2>
       <p class="intro">Responde preguntas de inglés, consigue puntos y cuida tus 3 vidas.</p>
       <label for="player-name">¿Cómo te llamas?</label>
-      <input id="player-name" type="text" maxlength="18" placeholder="Escribe tu nombre">
+      <input id="player-name" type="text" maxlength="18" placeholder="Escribe tu nombre" autocomplete="off">
       <button id="start-btn" class="primary-btn">¡Empezar! 🚀</button>
       <div class="mini-features"><span>⭐ Puntos</span><span>🔥 Rachas</span><span>❤️ 3 vidas</span></div>
     </section>
@@ -32,6 +32,7 @@
     <section id="game-screen" class="panel hidden">
       <div class="game-top">
         <div><span class="muted">JUGADOR</span><strong id="player-label">Jugador</strong></div>
+        <div><span class="muted">PUNTOS</span><strong>⭐ <span id="score">0</span></strong></div>
         <div><span class="muted">RACHA</span><strong>🔥 <span id="streak">0</span></strong></div>
         <div><span class="muted">VIDAS</span><strong id="lives">❤️❤️❤️</strong></div>
       </div>
@@ -64,8 +65,8 @@
         <ol id="leaderboard-list"></ol>
       </div>
     </section>
-    <footer>English Quest · Practica, aprende y vuelve a intentarlo 💛</footer>
+    <footer>English FundaVida · Practica, aprende y vuelve a intentarlo 💛</footer>
   </main>
-  <script src="/script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

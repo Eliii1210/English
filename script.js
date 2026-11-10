@@ -124,7 +124,11 @@ function saveResult() {
   records.push({ name: player, score, date: new Date().toLocaleDateString() });
   records.sort((a, b) => b.score - a.score);
   records = records.slice(0, 5);
-  localStorage.setItem("englishQuestScores", JSON.stringify(records));
+  try {
+    localStorage.setItem("englishQuestScores", JSON.stringify(records));
+  } catch (error) {
+    console.warn("No se pudo guardar la tabla de líderes en este navegador.", error);
+  }
 }
 
 function renderLeaderboard() {
