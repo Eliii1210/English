@@ -1,0 +1,16 @@
+ENGLISH QUEST - instrucciones
+
+1. Descarga y descomprime la carpeta.
+2. Abre index.html con doble clic. Se abrirá en tu navegador.
+3. Escribe un nombre y pulsa ¡Empezar!
+4. Responde las preguntas. Cada respuesta correcta suma 10 puntos.
+5. Cada respuesta incorrecta quita una vida. Empiezas con 3 vidas.
+6. Al terminar verás el resultado y la tabla de líderes.
+
+Archivos:
+- index.html: estructura y contenido de la página.
+- style.css: colores, diseño y adaptación a celular.
+- script.js: preguntas, puntos, vidas, racha y tabla de líderes.
+
+La tabla de líderes se guarda solo en el navegador y dispositivo donde se juega.
+No necesita instalación ni servidor.

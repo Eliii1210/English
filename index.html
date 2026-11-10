@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Quest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">★</span><div><h1>English Quest</h1><p>¡Aprende inglés jugando!</p></div></div>
+      <div class="score-pill">⭐ <span id="score">0</span> puntos</div>
+    </header>
+
+    <section id="start-screen" class="panel start-screen">
+      <div class="hero-icon">📚</div>
+      <p class="eyebrow">¡ES HORA DE JUGAR!</p>
+      <h2>¿Listo para tu misión?</h2>
+      <p class="intro">Responde preguntas de inglés, consigue puntos y cuida tus 3 vidas.</p>
+      <label for="player-name">¿Cómo te llamas?</label>
+      <input id="player-name" type="text" maxlength="18" placeholder="Escribe tu nombre">
+      <button id="start-btn" class="primary-btn">¡Empezar! 🚀</button>
+      <div class="mini-features"><span>⭐ Puntos</span><span>🔥 Rachas</span><span>❤️ 3 vidas</span></div>
+    </section>
+
+    <section id="game-screen" class="panel hidden">
+      <div class="game-top">
+        <div><span class="muted">JUGADOR</span><strong id="player-label">Jugador</strong></div>
+        <div><span class="muted">RACHA</span><strong>🔥 <span id="streak">0</span></strong></div>
+        <div><span class="muted">VIDAS</span><strong id="lives">❤️❤️❤️</strong></div>
+      </div>
+      <div class="progress-row"><span id="question-counter">Pregunta 1 de 10</span><span id="progress-percent">10%</span></div>
+      <div class="progress-track"><div id="progress-bar"></div></div>
+      <div class="question-card">
+        <p class="eyebrow" id="category">VOCABULARIO</p>
+        <h2 id="question">¿Cómo se dice “perro” en inglés?</h2>
+        <p class="hint">Elige la respuesta correcta</p>
+        <div id="answers" class="answers"></div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+        <button id="next-btn" class="primary-btn hidden">Siguiente pregunta →</button>
+      </div>
+    </section>
+
+    <section id="end-screen" class="panel start-screen hidden">
+      <div class="hero-icon" id="end-icon">🏆</div>
+      <p class="eyebrow">MISIÓN TERMINADA</p>
+      <h2 id="end-title">¡Buen trabajo!</h2>
+      <p id="end-message" class="intro">Terminaste la partida.</p>
+      <div class="result-stats">
+        <div><strong id="final-score">0</strong><span>Puntos</span></div>
+        <div><strong id="correct-count">0/10</strong><span>Correctas</span></div>
+        <div><strong id="best-streak">0</strong><span>Mejor racha</span></div>
+      </div>
+      <button id="restart-btn" class="primary-btn">Jugar otra vez 🔁</button>
+      <div class="leaderboard">
+        <h3>🏅 Tabla de líderes</h3>
+        <p class="small-note">Los resultados se guardan en este navegador.</p>
+        <ol id="leaderboard-list"></ol>
+      </div>
+    </section>
+    <footer>English Quest · Practica, aprende y vuelve a intentarlo 💛</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
